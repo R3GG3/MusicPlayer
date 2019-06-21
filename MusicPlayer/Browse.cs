@@ -63,7 +63,13 @@ namespace MusicPlayer
                 Close();
             }
 
+            catch (ArgumentNullException)
+            {
+                Close();
+            }
         }
+
+
 
         private void Browse_Load(object sender, EventArgs e)
         {
@@ -100,7 +106,7 @@ namespace MusicPlayer
 
                     foreach (string s in files)
                     {
-                        File.Copy(@"music\"+foldername+@"\"+Path.GetFileName(s), @"music\"+Path.GetFileName(s), true);
+                        File.Copy(@"music\" + foldername + @"\" + Path.GetFileName(s), @"music\" + Path.GetFileName(s), true);
                     }
 
                 }
