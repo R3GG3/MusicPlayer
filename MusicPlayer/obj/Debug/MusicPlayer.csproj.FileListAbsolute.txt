@@ -42,3 +42,9 @@ C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj
 C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.CoreCompileInputs.cache
 C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
 C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\bin\Debug\DotNetBrowser.Chromium64.dll
+C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\bin\Debug\DotNetBrowser.dll
+C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\bin\Debug\DotNetBrowser.Chromium32.dll
+C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\bin\Debug\DotNetBrowser.xml
+C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.CopyComplete
+C:\Users\konra\source\repos\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.Download.resources

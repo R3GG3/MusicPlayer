@@ -75,14 +75,7 @@ namespace MusicPlayer
         private void Downloadbutton_Click(object sender, EventArgs e)
         {
             Process.Start("chrome.exe", "https://www.youtube.com/");
-            Process.Start("chrome.exe", "https://www.onlinevideoconverter.com/pl/mp3-converter");
-            foreach (Process p in Process.GetProcesses())
-            {
-                if (p.ProcessName == "chrome")
-                {
-                    p.Kill();
-                }
-            }
+            Process.Start("chrome.exe", "https://www.onlinevideoconverter.com/pl");
         }
 
         private void Addbutton_Click(object sender, EventArgs e)
