@@ -161,6 +161,7 @@ namespace MusicPlayer
 
                 foreach (string s in files)
                 {
+                    if(Path.GetFileName(s).Contains(".mp3"))
                     listBox1.Items.Add(Path.GetFileName(s));
                     listBox1.Sorted = true;
                 }
@@ -252,11 +253,9 @@ namespace MusicPlayer
 
                 foreach (string s in files)
                 {
-                    listBox1.BeginUpdate();
+                    if(Path.GetFileName(s).Contains(".mp3"))
                     listBox1.Items.Add(Path.GetFileName(s));
                     listBox1.Sorted = true;
-                    listBox1.EndUpdate();
-                    listBox1.Update();
                 }
 
             }
@@ -285,9 +284,10 @@ namespace MusicPlayer
 
                 foreach (string s in files)
                 {
-                    listBox1.Items.Add(Path.GetFileName(s));
-                    listBox1.Sorted = true;
-                    listBox1.Refresh();
+                    if (Path.GetFileName(s).Contains(".mp3"))
+                        listBox1.Items.Add(Path.GetFileName(s));
+                        listBox1.Sorted = true;
+                        listBox1.Refresh();
                 }
                 ChoosePlaylistPanel.Visible = false;
             }
