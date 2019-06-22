@@ -36,12 +36,6 @@
     <ApplicationIcon>Treetog-I-Audio-File.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetBrowser">
-      <HintPath>..\..\..\..\OneDrive\Pulpit\dotnetbrowser-1.20.1\Library\DotNetBrowser.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetBrowser.Chromium64">
-      <HintPath>..\..\..\..\OneDrive\Pulpit\dotnetbrowser-1.20.1\Library\DotNetBrowser.Chromium64.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
