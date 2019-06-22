@@ -45,10 +45,19 @@ namespace MusicPlayer
         }
         private void Button3_Click(object sender, EventArgs e)
         {
-            string dir = listBox2.SelectedItem.ToString();
-            Directory.Delete(@"music\"+dir, true);
-            listBox2.Items.Remove(dir);
-            listBox2.Update();
+            try
+            {
+                string dir = listBox2.SelectedItem.ToString();
+                Directory.Delete(@"music\" + dir, true);
+                listBox2.Items.Remove(dir);
+                listBox2.Update();
+            }
+
+            catch(NullReferenceException)
+            {
+
+            }
+            
         }
     }
 }

@@ -59,7 +59,8 @@ namespace MusicPlayer
 
             foreach (string s in musics)
             {
-                listBox2.Items.Add(Path.GetFileName(s));
+                if (Path.GetFileName(s).Contains(".mp3"))
+                    listBox2.Items.Add(Path.GetFileName(s));
             }
 
             Application.Idle += new EventHandler(Idle);
@@ -86,11 +87,25 @@ namespace MusicPlayer
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            listBox4.Items.Clear();
-            string[] musics1 = Directory.GetFiles(@"music\" + listBox3.SelectedItem.ToString() + @"\");
-            foreach (string s in musics1)
+            try
             {
-                listBox4.Items.Add(Path.GetFileName(s));
+                listBox4.Items.Clear();
+                string[] musics1 = Directory.GetFiles(@"music\" + listBox3.SelectedItem.ToString() + @"\");
+                foreach (string s in musics1)
+                {
+                    if (Path.GetFileName(s).Contains(".mp3"))
+                        listBox4.Items.Add(Path.GetFileName(s));
+                }
+            }
+
+            catch(NullReferenceException)
+            {
+
+            }
+
+            catch(ArgumentNullException)
+            {
+
             }
         }
 

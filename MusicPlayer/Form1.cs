@@ -19,7 +19,7 @@ namespace MusicPlayer
     public partial class Form1 : Form
     {
         public static string FileName;
-        public static bool first = true;
+        public static bool first = true, second = false;
 
         public Form1()
         {
@@ -59,7 +59,6 @@ namespace MusicPlayer
                     listBox1.SelectedItem = listBox1.Items[0];
                 }
 
-                Newurl();
                 first = false;
             }
 
@@ -116,7 +115,6 @@ namespace MusicPlayer
         {
             try
             {
-                axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
                 axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(player_PlayStateChange);
                 axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(player_PlayStateChange1);
                 axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(player_PlayStateChange2);
@@ -161,8 +159,8 @@ namespace MusicPlayer
 
                 foreach (string s in files)
                 {
-                    if(Path.GetFileName(s).Contains(".mp3"))
-                    listBox1.Items.Add(Path.GetFileName(s));
+                    if (Path.GetFileName(s).Contains(".mp3"))
+                        listBox1.Items.Add(Path.GetFileName(s));
                     listBox1.Sorted = true;
                 }
             }
@@ -176,19 +174,18 @@ namespace MusicPlayer
             string musicnamefull = listBox1.SelectedItem.ToString();
             string musicname = musicnamefull.Substring(0, musicnamefull.Length - 4);
             textBox1.Text = musicname;
-        }
-
-        private void Newurl()
-        {
-            //axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
+            second = true;
         }
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
-            string musicnamefull = listBox1.SelectedItem.ToString();
-            string musicname = musicnamefull.Substring(0, musicnamefull.Length - 4);
-            textBox1.Text = musicname;
+            if (second)
+            {
+                axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
+                string musicnamefull = listBox1.SelectedItem.ToString();
+                string musicname = musicnamefull.Substring(0, musicnamefull.Length - 4);
+                textBox1.Text = musicname;
+            }
         }
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -258,8 +255,8 @@ namespace MusicPlayer
 
                 foreach (string s in files)
                 {
-                    if(Path.GetFileName(s).Contains(".mp3"))
-                    listBox1.Items.Add(Path.GetFileName(s));
+                    if (Path.GetFileName(s).Contains(".mp3"))
+                        listBox1.Items.Add(Path.GetFileName(s));
                     listBox1.Sorted = true;
                 }
 
@@ -291,8 +288,8 @@ namespace MusicPlayer
                 {
                     if (Path.GetFileName(s).Contains(".mp3"))
                         listBox1.Items.Add(Path.GetFileName(s));
-                        listBox1.Sorted = true;
-                        listBox1.Refresh();
+                    listBox1.Sorted = true;
+                    listBox1.Refresh();
                 }
                 ChoosePlaylistPanel.Visible = false;
             }
@@ -320,6 +317,11 @@ namespace MusicPlayer
             Browse browse = new Browse();
             Browse.folder = true;
             browse.Show();
+        }
+
+        private void FoundABugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hey If you found some bugs, that are really peace you up, you can write to me on my e-mail, and I will try to fix this!\nE-mail: konrad.soczi@gmail.com", "Info");
         }
     }
 }
