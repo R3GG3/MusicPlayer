@@ -47,7 +47,7 @@ namespace MusicPlayer
         private void player_PlayStateChange2(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
 
-            if ((fORPLAYLISTToolStripMenuItem.Checked) && (e.newState == 8))
+            if ((fORPLAYLISTToolStripMenuItem.Checked) && (e.newState == 8) && (first))
             {
                 try
                 {
@@ -59,7 +59,6 @@ namespace MusicPlayer
                     listBox1.SelectedItem = listBox1.Items[0];
                 }
 
-                textBox1.Text = listBox1.SelectedItem.ToString();
                 Newurl();
                 first = false;
             }
@@ -178,12 +177,13 @@ namespace MusicPlayer
 
         private void Newurl()
         {
-            axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
+            //axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
         }
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
+            textBox1.Text = listBox1.SelectedItem.ToString();
         }
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
