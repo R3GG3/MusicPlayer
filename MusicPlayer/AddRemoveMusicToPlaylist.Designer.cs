@@ -40,8 +40,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -168,16 +168,6 @@
             this.panel2.Size = new System.Drawing.Size(447, 233);
             this.panel2.TabIndex = 11;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(285, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Music";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -187,6 +177,16 @@
             this.label4.Size = new System.Drawing.Size(54, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "Playlist";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(285, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Music";
             // 
             // AddRemoveMusicToPlaylist
             // 
@@ -198,6 +198,8 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AddRemoveMusicToPlaylist";
             this.Text = "AddRemoveMusicToPlaylist";
             this.Load += new System.EventHandler(this.AddRemoveMusicToPlaylist_Load);

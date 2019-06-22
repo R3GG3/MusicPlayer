@@ -51,11 +51,11 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.foundABugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChoosePlaylistPanel = new System.Windows.Forms.Panel();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.foundABugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.ChoosePlaylistPanel.SuspendLayout();
@@ -159,6 +159,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Navy;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(11, 57);
@@ -305,6 +306,13 @@
             this.aboutProgramToolStripMenuItem.Text = "About Program";
             this.aboutProgramToolStripMenuItem.Click += new System.EventHandler(this.AboutProgramToolStripMenuItem_Click);
             // 
+            // foundABugToolStripMenuItem
+            // 
+            this.foundABugToolStripMenuItem.Name = "foundABugToolStripMenuItem";
+            this.foundABugToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.foundABugToolStripMenuItem.Text = "Found A bug?";
+            this.foundABugToolStripMenuItem.Click += new System.EventHandler(this.FoundABugToolStripMenuItem_Click);
+            // 
             // ChoosePlaylistPanel
             // 
             this.ChoosePlaylistPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChoosePlaylistPanel.BackgroundImage")));
@@ -349,13 +357,6 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(461, 396);
             this.MainPanel.TabIndex = 14;
-            // 
-            // foundABugToolStripMenuItem
-            // 
-            this.foundABugToolStripMenuItem.Name = "foundABugToolStripMenuItem";
-            this.foundABugToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.foundABugToolStripMenuItem.Text = "Found A bug?";
-            this.foundABugToolStripMenuItem.Click += new System.EventHandler(this.FoundABugToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -79,12 +79,6 @@
     <Compile Include="Playlist.Designer.cs">
       <DependentUpon>Playlist.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlaylistChoose.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PlaylistChoose.Designer.cs">
-      <DependentUpon>PlaylistChoose.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddRemoveMusicToPlaylist.resx">
@@ -101,9 +95,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Playlist.resx">
       <DependentUpon>Playlist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PlaylistChoose.resx">
-      <DependentUpon>PlaylistChoose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
