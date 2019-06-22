@@ -73,8 +73,9 @@ namespace MusicPlayer
 
         private void Downloadbutton_Click(object sender, EventArgs e)
         {
-            Process.Start("chrome.exe", "https://www.youtube.com/");
-            Process.Start("chrome.exe", "https://www.onlinevideoconverter.com/pl");
+            MessageBox.Show("Work in Progress!");
+            //Process.Start("chrome.exe", "https://www.youtube.com/");
+            //Process.Start("chrome.exe", "https://www.onlinevideoconverter.com/pl");
         }
 
         private void Addbutton_Click(object sender, EventArgs e)
@@ -172,7 +173,9 @@ namespace MusicPlayer
             }
 
             listBox1.SelectedItem = listBox1.Items[0];
-            textBox1.Text = listBox1.SelectedItem.ToString();
+            string musicnamefull = listBox1.SelectedItem.ToString();
+            string musicname = musicnamefull.Substring(0, musicnamefull.Length - 4);
+            textBox1.Text = musicname;
         }
 
         private void Newurl()
@@ -183,7 +186,9 @@ namespace MusicPlayer
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.URL = @"music\" + listBox1.SelectedItem.ToString();
-            textBox1.Text = listBox1.SelectedItem.ToString();
+            string musicnamefull = listBox1.SelectedItem.ToString();
+            string musicname = musicnamefull.Substring(0, musicnamefull.Length - 4);
+            textBox1.Text = musicname;
         }
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -197,7 +202,7 @@ namespace MusicPlayer
 
         private void AboutProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This program was made by Lodomir, all Rights Reserved!", "Info");
+            MessageBox.Show("This program was made by Lodomir/R3GG3/Konrad, all Rights Reserved!\n\nMusicPlayer v0.99", "Info");
         }
 
         private void TurnONToolStripMenuItem_Click(object sender, EventArgs e)
