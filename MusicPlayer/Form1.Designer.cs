@@ -79,6 +79,7 @@
             // 
             this.downloadbutton.BackColor = System.Drawing.Color.Green;
             this.downloadbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.downloadbutton.Enabled = false;
             this.downloadbutton.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.downloadbutton.FlatAppearance.BorderSize = 2;
             this.downloadbutton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
@@ -93,6 +94,7 @@
             this.downloadbutton.TabIndex = 4;
             this.downloadbutton.Text = "Download";
             this.downloadbutton.UseVisualStyleBackColor = false;
+            this.downloadbutton.Visible = false;
             this.downloadbutton.Click += new System.EventHandler(this.Downloadbutton_Click);
             // 
             // addbutton

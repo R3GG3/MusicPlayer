@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -103,10 +104,29 @@ namespace MusicPlayer
                     string foldername = Path.GetFileName(pathname);
                     string[] files = Directory.GetFiles(pathname);
                     Directory.Move(pathname, @"music\" + foldername);
+                    Thread.Sleep(1000);
 
                     foreach (string s in files)
                     {
-                        File.Copy(@"music\" + foldername + @"\" + Path.GetFileName(s), @"music\" + Path.GetFileName(s), true);
+                        if (File.Exists(@"music\" + foldername + @"\" + Path.GetFileName(s)))
+                        {
+                            if (!Path.GetFileName(s).Contains(".mp3"))
+                            {
+                                File.Delete(@"music\" + foldername + @"\" + Path.GetFileName(s));
+                            }
+                        }
+
+                        Thread.Sleep(1000);
+
+                        try
+                        {
+                            File.Copy(@"music\" + foldername + @"\" + Path.GetFileName(s), @"music\" + Path.GetFileName(s), true);
+                        }
+
+                        catch (FileNotFoundException)
+                        {
+
+                        }
                     }
 
                 }
